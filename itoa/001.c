@@ -1,8 +1,10 @@
 // Create a function to convert an integer to string.
 // This solution implements pointers
 
+#include <limits.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * @fn int itoa(int n, char**s)
@@ -16,7 +18,8 @@
 int itoa(int n, char **s);
 
 int main() {
-    int n = 0;
+    // The integer to convert into string
+    int n = INT_MIN;
     char *ns;
 
     if ( itoa(n, &ns) == -1 ) {
@@ -41,6 +44,12 @@ int itoa(int n, char **s) {
     // Assigns the memory for *s and initialize it with zeros
     *s = (char*) calloc(nlen, sizeof(char));
     if (s == NULL) return 1;
+
+    // Handles INT_MIN overflow
+    if (n == INT_MIN) {
+        strcpy(*s, "-2147483648");
+        return 0;
+    }
 
     // Handles negative integer
     if (n < 0) {
