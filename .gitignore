@@ -1,0 +1,6 @@
+# Ignores windows ejecutables
+**/.exe
+# Ignore all files (allows to ignore extensionless files)
+**/
+# Prevents files with an extension from being ignored
+!**/*.
