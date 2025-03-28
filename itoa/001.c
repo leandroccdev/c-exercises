@@ -4,6 +4,9 @@
 // How to compile this exercise?
 // gcc -g 001.c -o 001
 // -g: adds debug information for gdb debugger.
+// How to execute the binary file?
+// Sets the file as executable: chmod +x 001
+// Runs the file: ./001
 
 #include <limits.h>
 #include <stdlib.h>
