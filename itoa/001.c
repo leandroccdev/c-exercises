@@ -1,6 +1,7 @@
 // Exercise:
 // Create a function to convert an integer to string.
 // This solution implements pointers
+
 // How to compile this exercise?
 // gcc -g 001.c -o 001
 // -g: adds debug information for gdb debugger.
